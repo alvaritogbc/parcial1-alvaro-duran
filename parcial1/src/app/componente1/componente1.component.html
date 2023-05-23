@@ -1,0 +1,11 @@
+<h1>Lista de Productos</h1>
+
+<input type="text" [(ngModel)]="filtro" (input)="filtrarProductos()" placeholder="Filtrar por descuento" />
+
+<div *ngFor="let producto of productos">
+  <h3>{{ producto.nombre }}</h3>
+  <p>Precio: {{ producto.precio }}</p>
+  <p>Descuento: {{ producto.descuento }}</p>
+</div>
+
+<button (click)="refrescarProductos()">Refrescar Productos</button>
